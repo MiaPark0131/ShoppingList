@@ -99,11 +99,9 @@ public class ShoppingListServlet extends HttpServlet {
         if (item != "") {
             
             ArrayList<String> items = (ArrayList<String>) session.getAttribute("items");
-
             items.add(item);
-
             session.setAttribute("items", items);
-        }
+        } 
         
         getServletContext().getRequestDispatcher("/WEB-INF/shoppingList.jsp").forward(request, response);
     }
